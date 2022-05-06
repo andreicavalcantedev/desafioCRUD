@@ -1,0 +1,100 @@
+@import '../../global.css';
+
+.titulo_usuarios{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.inputs_alinhamento{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs{
+    display: block;
+    width: 320px;
+    height: 58px;
+    border: 1px solid #000000;
+    margin-top: 10px;
+    font-size: 24px;
+    padding-left: 20px;
+    font-family: 'Roboto';
+}
+
+.btn_cadastrar{
+    width: 180px;
+    height: 58px;
+    background-color: #F6511D;
+    font-size: 20px;
+    font-family: 'Roboto';
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 80px;
+}
+
+.labels{
+    font-family: 'Roboto';
+    color: #4B2142;
+    font-size: 20px;
+}
+
+.div_pai_card{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 85px;
+    color: #4B2142;
+}
+
+.padding_text_coluna{
+    padding-top: 5px;
+}
+
+.padding_text{
+    padding-top: 49px;
+    padding-bottom: 49px;
+}
+
+.linha2{
+    width: 100px;
+}
+
+.espaco_botao{
+    margin-top: 38px;
+}
+
+.espaco_botao2{
+    margin-top: 36px;
+}
+
+.btn_editar{
+    width: 125px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #F6511D;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.btn_excluir{
+    width: 125px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    background-color: #41B8D2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn_cadastrar:hover,
+.btn_editar:hover,
+.btn_excluir:hover{
+    border: solid #4B2142;
+}

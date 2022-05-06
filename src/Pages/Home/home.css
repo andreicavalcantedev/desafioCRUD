@@ -1,0 +1,40 @@
+@import '../../global.css';
+
+.h1_homepage{
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 36px;
+    margin-bottom: 60px;
+}
+
+.titulo_homepage{
+    font-family: 'Roboto';
+    font-size: 24px;
+    text-align: left;
+}
+
+.subtitulos_homepage{
+    font-family: 'Roboto';
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+.texto_info_principal{
+    font-family: 'Roboto';
+    font-size: 14px;
+    width: 1025px;
+}
+
+.alinhamento_cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.subtitulo_card{
+    font-family: 'Roboto';
+    width: 400px;
+    font-size: 14px;
+}

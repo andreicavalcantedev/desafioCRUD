@@ -1,0 +1,93 @@
+@import '../../global.css';
+
+.modal{
+    width: 900px;
+    height: 500px;
+    border: 2px solid;
+    border-radius: 12px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    background: #FFFFFF;
+    border: none;
+    z-index: 10;
+}   
+
+.header_modal{
+    width: 900px;
+    height: 73px;
+    background-color: #F6511D;
+    position: relative;
+}
+
+.div_pai_elements{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-block-size: -webkit-fill-available;
+}
+
+.div_modal_title{
+    margin: auto;
+}
+
+.div_modal_btn_close{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text_edit_modal{
+    font-family: 'Roboto';
+    font-size: 38px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.close_modal{
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 40px;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.close_modal:hover{
+    color: black;
+}
+
+.div_pai_inputs{
+    width: 600px;
+    height: 375px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.footer_modal{
+    width: 900px;
+    height: 70px;
+    background-color: #F6511D;
+    display: flex;
+}
+.img_position_modal{
+    height: 50px;
+    display: flex;
+    margin: auto;
+}
+
+/* Mostrar / ocultar Modal*/
+
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}

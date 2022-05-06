@@ -1,0 +1,100 @@
+@import '../../global.css';
+
+.topico_principal{
+    text-align: center;
+}
+
+.h1_filmes{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.cadastrar_titulo{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.alinhamento_input_filmes{
+    display: flex;
+    justify-content: space-between;
+}
+
+select{
+    width: 400px;
+    height: 58px;
+    border: 1px solid #000000;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../../Assets/Img/select.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 60%, 0 0;
+    background-size: 0.8em auto, 100%;
+    padding: 5px 0px 0px 25px;
+    font-size: 20px;
+    color: #4B2142;
+}
+
+select:required:invalid {
+    color: #4B2142;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: #4B2142;
+    font-size: 14px;
+}
+
+.input_filme{
+    width: 400px;
+    height: 58px;
+    border: 1px solid #000000;
+    padding: 5px 0px 0px 25px;
+    font-size: 20px;
+}
+
+.input_filme::placeholder{
+    font-size: 20px;
+    color: #4B2142;
+    align-items: center;
+}
+
+.btn_salvar{
+    width: 180px;
+    height: 58px;
+    background-color: #F6511D;
+    font-size: 20px;
+    font-family: 'Roboto';
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn_salvar:hover{
+    border: solid #4B2142;
+}
+
+.div_pai_cards{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 85px;
+    margin-bottom: 70px;
+    color: #4B2142;
+}
+
+.div_position_map{
+    width: 320px;
+}
+
+.select_values{
+    width: 100px;
+    height: 100px;
+}
