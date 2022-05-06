@@ -53,4 +53,4 @@ jobs:
           app-name: 'desafio7completo'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_803A528BFA524D20AD70E85D09997145 }}
-          package: .
+          package: 'build'
