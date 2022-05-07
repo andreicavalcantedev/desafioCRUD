@@ -19,7 +19,7 @@ export const Filmes = () =>{
     const [idGeneros, setIdGeneros] = useState(0)
     const [idFilmes, setIdFilmes] = useState(0)
 
-    const AbrirFecharModal = (estadoAtual, idGenero, idFilme) =>
+    const AbrirFecharModal = (estadoAtual,idGenero, idFilme) =>
     {
         if(estadoAtual === 'hide')
         {
@@ -33,7 +33,8 @@ export const Filmes = () =>{
         setIdGeneros(idGenero)
         setIdFilmes(idFilme)
         setGeneros(genero)
-
+        console.log(idGeneros);
+        
         window.scroll({top: 150,left: 0,behavior: 'smooth'});
     }
 
@@ -49,15 +50,7 @@ export const Filmes = () =>{
         })
     }
 
-    const listarFilmes = () => {
-
-        for (let index = 0; index < genero.length; index++) {
-            apiFilmes.get(`Genero/${index + 1}/Filme`)
-                .then(resultado => {
-                    setMovies(movie => movie.concat(resultado.data))
-                })
-        }
-    }
+    const listarFilmes = () => {}
 
     useEffect(() => {
         listarGeneros()
@@ -65,7 +58,13 @@ export const Filmes = () =>{
     
     useEffect(() => {
         listarFilmes()
-        //eslint-disable-next-line
+        for (let index = 0; index < genero.length; index++) {
+            apiFilmes.get(`Genero/${index + 1}/Filme`)
+                .then(resultado => {
+                    setMovies(filme => filme.concat(resultado.data))
+                })
+        }
+        
     }, [genero])
     
     useEffect(() => {
@@ -128,7 +127,7 @@ export const Filmes = () =>{
                 </div>
             </div>
 
-            <ModalFilmes mostrar={modal} funcao={AbrirFecharModal} idGenero={idGeneros} idFilme={idFilmes} classe={genero}/>
+            <ModalFilmes mostrar={modal} funcao={AbrirFecharModal} idGenero={idGeneros} idFilme={idFilmes}/>
 
                 {movie.map((item) =>{
                     return(

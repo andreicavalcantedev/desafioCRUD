@@ -23,7 +23,6 @@ export const Modal = (props) => {
 
     const Editar = (idGenero, idFilme) =>{
         apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: select})
-        .then(window.location.reload())
     }
 
     return(
@@ -57,12 +56,12 @@ export const Modal = (props) => {
                         <select 
                             required
                             className="select_filmes_modal"
+                            value={select}
                             onChange={(estadoDoSelect) => SetSelect(estadoDoSelect.target.value)}>
                             <option hidden disabled selected>Gênero</option>
                             {genero.map((item) => {
                                 return(
-                                    <option className="select_values" 
-                                    value={item.idGenero} 
+                                    <option className="select_values"
                                     onChange={(e) => SetSelect(e.target.value)}>{item.valueGenero}</option>
                                 );
                             })}
@@ -71,7 +70,7 @@ export const Modal = (props) => {
 
 
                         <div className="btn_position_modal">
-                            <button className="btn_salvar" onClick={() => {Editar(props.idGenero, props.idFilme, select)}}>Editar</button>
+                            <button className="btn_salvar" onClick={() => Editar(props.idGenero, props.idFilme)}>Editar</button>
                         </div>
                         
                     </div>
