@@ -33,7 +33,6 @@ export const Filmes = () =>{
         setIdGeneros(idGenero)
         setIdFilmes(idFilme)
         setGeneros(genero)
-        console.log(idGeneros);
         
         window.scroll({top: 150,left: 0,behavior: 'smooth'});
     }
@@ -50,18 +49,15 @@ export const Filmes = () =>{
         })
     }
 
-    const listarFilmes = () => {}
-
     useEffect(() => {
         listarGeneros()
     }, [])
     
     useEffect(() => {
-        listarFilmes()
         for (let index = 0; index < genero.length; index++) {
             apiFilmes.get(`Genero/${index + 1}/Filme`)
                 .then(resultado => {
-                    setMovies(filme => filme.concat(resultado.data))
+                    setMovies(movie => movie.concat(resultado.data))
                 })
         }
         
@@ -73,7 +69,7 @@ export const Filmes = () =>{
     //POST
 
     const [register, setRegister] = useState('')
-    const [select, SetSelect] = useState(0)
+    const [select, SetSelect] = useState(1)
 
     const Registrar = (idGenero) =>
     {
@@ -114,10 +110,10 @@ export const Filmes = () =>{
                     <select required
                      onChange={(estadoDoSelect) => SetSelect(Number(estadoDoSelect.target.value))}>
 
-                        <option value="" hidden disabled selected>Gênero</option>
+                        <option disabled >Gênero</option>
 
                         {genero.map((item) => {
-                            return(<option className="select_values" value={item.idGenero}>{item.valueGenero}</option>)
+                            return(<option className="select_values" key={item.idGenero} value={item.idGenero}>{item.valueGenero}</option>)
                         })}
                     </select>
                 </div>
@@ -132,7 +128,7 @@ export const Filmes = () =>{
                 {movie.map((item) =>{
                     return(
                         <>
-                            <div className="div_pai_card1">
+                            <div className="div_pai_card1" >
                                 <div>
                                     <p className="text_map">{item.nomeFilme}</p>
                                 </div>

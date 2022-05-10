@@ -13,8 +13,8 @@ export const Genero = (props) =>{
         descricao: "Cadastre os gêneros dos filmes"
     }
 
-    const [modal, SetModal] = useState('hide')
     const [getId, setGetId] = useState(0)
+    const [modal, SetModal] = useState('hide')
 
     const AbrirFecharModal = (estadoAtual, idGenero) =>
     {
@@ -97,7 +97,6 @@ export const Genero = (props) =>{
                             {genero.map((item) => {
                                 
                             return(
-
                             <>
                                 <div className="div_pai_card1">
 

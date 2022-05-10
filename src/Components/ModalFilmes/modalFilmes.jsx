@@ -22,7 +22,15 @@ export const Modal = (props) => {
     }, [])
 
     const Editar = (idGenero, idFilme) =>{
-        apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: select})
+
+        if(select === ''){
+            let guardar = props.idGenero
+            apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: guardar})
+        }
+        else
+        {
+            apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: select})
+        }
     }
 
     return(
@@ -57,13 +65,11 @@ export const Modal = (props) => {
                             required
                             className="select_filmes_modal"
                             value={select}
-                            onChange={(estadoDoSelect) => SetSelect(estadoDoSelect.target.value)}>
-                            <option hidden disabled selected>Gênero</option>
+                            onChange={(estadoDoSelect) => {SetSelect(estadoDoSelect.target.value)
+                            console.log(select);}}>
+                            <option hidden disabled defaultValue>Gênero</option>
                             {genero.map((item) => {
-                                return(
-                                    <option className="select_values"
-                                    onChange={(e) => SetSelect(e.target.value)}>{item.valueGenero}</option>
-                                );
+                                return(<option className="select_values" value={item.idGenero} key={item.idGenero}>{item.valueGenero}</option>);
                             })}
                                 
                         </select>
