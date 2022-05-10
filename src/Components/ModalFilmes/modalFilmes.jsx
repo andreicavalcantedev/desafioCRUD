@@ -23,13 +23,16 @@ export const Modal = (props) => {
 
     const Editar = (idGenero, idFilme) =>{
 
-        if(select === ''){
+        if(select === '')
+        {
             let guardar = props.idGenero
             apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: guardar})
+            .then(() => window.location.reload())
         }
         else
         {
             apiFilmes.put(`Genero/${idGenero}/Filme/${idFilme}`, {nomeFilme: register, idGenero: select})
+            .then(() => window.location.reload())
         }
     }
 
